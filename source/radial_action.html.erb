@@ -1,0 +1,26 @@
+<div class="material-container">
+  <ul class="screen">
+    <li class="toolbar">
+    <div class="toggle" id="toggle">
+      <div class="arrow no">
+        <%= image_tag "arrow.png" %>
+      </div>
+      <div class="menu">
+        <%= image_tag "menu.png" %>
+      </div>
+    </div>
+    </li>
+  </ul>
+</div>
+
+<script>
+$(document).ready(function() {
+    var menu = $(".menu > img");
+    var arrow = $(".arrow > img");
+
+    $("#toggle").on('click', function() {
+      menu.toggleClass('out').delay(500);
+      $(this).toggleClass('anim');
+     });
+  });
+</script>
