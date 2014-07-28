@@ -1,46 +1,37 @@
 <div class="container">
-  <ul class="wifi">
+  <ul class="animation-list">
     <li class="wifi-names">
       Wifi 1
-      <div class="wifi-backgrounds center"></div>
+      <div class="animated-backgrounds center"></div>
     </li>
     <li class="wifi-names">
       Wifi 2
-      <div class="wifi-backgrounds center"></div>
+      <div class="animated-backgrounds center"></div>
     </li>
     <li class="wifi-names">
       Wifi 3
-      <div class="wifi-backgrounds left"></div>
+      <div class="animated-backgrounds left"></div>
     </li>
     <li class="wifi-names">
       Wifi 4
-      <div class="wifi-backgrounds left"></div>
+      <div class="animated-backgrounds left"></div>
     </li>
     <li class="wifi-names">
       Wifi 5
-      <div class="wifi-backgrounds right"></div>
+      <div class="animated-backgrounds right"></div>
     </li>
     <li class="wifi-names">
       Wifi 6
-      <div class="wifi-backgrounds right"></div>
+      <div class="animated-backgrounds right"></div>
     </li>
   </ul>
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="javascripts/all.js"></script>
 <script>
 
 $(document).ready(function() {
-    var delayAmount = 400;
-    var fadeOutTime = 400;
-    var fadeInTime = 200;
-
-    $(".wifi-names").on("mouseenter", function(event) {
-      $(event.target).find(".wifi-backgrounds")
-        .animate({opacity: 1}, fadeInTime, function(){
-          $(this).delay(delayAmount)
-          .animate({opacity: 0}, fadeOutTime);
-        });
-      });
+    surfaceReact();
     });
 </script>

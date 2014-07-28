@@ -1,0 +1,54 @@
+.wifi-names {
+  @include size(100%);
+  background: #ffffff;
+  padding: 2em;
+  position: relative;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+
+  &:hover {
+
+    .animated-backgrounds {
+      background: rgba(200,200,200,0.15);
+      height: 100%;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      transition: transform 0.7s ease-in, background 0.7s ease-in;
+      z-index: 10;
+
+      &.left {
+        @include transform(scaleX(6));
+        @include transform-origin(center left);
+        left: 0;
+        width: 20%;
+
+      }
+
+      &.center {
+        @include transform(scaleX(5));
+        @include transform-origin(center center);
+        left: 38%;
+        width: 25%;
+      }
+
+      &.right {
+        @include transform(scaleX(6));
+        @include transform-origin(center right);
+        right: 0;
+        width: 20%;
+      }
+
+    }
+  }
+}
+
+@include keyframes(fadeInOut) {
+  0% {color: blue};
+  100% {color: red};
+}

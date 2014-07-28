@@ -1,0 +1,68 @@
+.material-container {
+  @extend .container;
+  box-shadow: none !important;
+  border: none !important;
+
+  .animation-list {
+    background: none !important;
+
+    .course-names {
+      @include size(100%);
+      background: #ffffff;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+      margin-bottom: 1em;
+      padding: 2em;
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow 0.25s ease-in;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+        transition: box-shadow 0.5s ease-in;
+
+        .animated-backgrounds {
+          background: #efefef;
+          opacity: 0.1;
+          height: 250%;
+          top: -50%;
+          overflow: hidden;
+          position: absolute;
+          transition: transform 0.7s ease-in, background 0.7s ease-in;
+          z-index: 10;
+
+          &.left {
+            @include transform(scaleX(6));
+            @include transform-origin(center left);
+            left: 0;
+            width: 20%;
+
+          }
+
+          &.center {
+            @include transform(scaleX(5));
+            @include transform-origin(center center);
+            left: 38%;
+            width: 25%;
+          }
+
+          &.right {
+            @include transform(scaleX(6));
+            @include transform-origin(center right);
+            right: 0;
+            width: 20%;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+@include keyframes(fadeInOut) {
+  0% {color: blue};
+  100% {color: red};
+}
