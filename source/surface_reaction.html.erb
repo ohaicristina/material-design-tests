@@ -30,7 +30,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
 
-$(document).ready(function() {
+/*$(document).ready(function() {
     var delayAmount = 400;
     var fadeOutTime = 400;
     var fadeInTime = 200;
@@ -42,5 +42,12 @@ $(document).ready(function() {
           .animate({opacity: 0}, fadeOutTime);
         });
       });
+      });*/
+
+$(document).ready(function() {
+    $(".wifi-names").mouseenter(function() {
+      $(this).toggleClass("wifi-test");
+      });
     });
+
 </script>
