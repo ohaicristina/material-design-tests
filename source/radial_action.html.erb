@@ -1,0 +1,80 @@
+<div class="material-container">
+  <ul class="screen">
+    <li class="toolbar">
+    <div class="toggle" id="toggle">
+      <div class="icons-pull-left">
+      <div class="arrow">
+        <%= image_tag "arrow.png", class: "out" %>
+      </div>
+    </div>
+      <div class="menu">
+        <%= image_tag "menu.png" %>
+      </div>
+   
+      <div class="heart">
+        <%= image_tag "heart.png" %>
+      </div>
+      <div class="add">
+        <%= image_tag "add.png" %>
+      </div>
+      <div class="search">
+        <%= image_tag "search.png" %>
+      </div>
+      <div class="icons-pull-right">
+      <div class="download">
+        <%= image_tag "download.png", class: "hide" %>
+      </div>
+      <div class="trash">
+        <%= image_tag "trash.png", class: "hide" %>
+      </div>
+    </div>
+    </div>
+    </li>
+  </ul>
+</div>
+
+<script>
+$(document).ready(function() {
+    var menu = $(".menu > img");
+    var arrow = $(".arrow > img");
+    var heart = $(".heart > img");
+    var add = $(".add > img");
+    var search = $(".search > img");
+    var download = $(".download > img");
+    var trash = $(".trash > img");
+
+
+    $("#toggle").on('click', function() {
+     // if (menu.hasClass('in')) {
+     //     menu.addClass('out').removeClass('in');
+     //     arrow.addClass('in').removeClass('out').delay(800);
+     //     } else {
+     //     menu.removeClass('out').addClass('in').delay(800)
+     //         .queue(function (next) {
+     //           menu.removeClass('in');
+     //           next();
+     //           });
+     //         }
+      /*if (arrow.hasClass('in')) {
+          arrow.addClass('out');
+          } else {
+          arrow.removeClass('out').addClass('in').delay(800)
+              .queue(function (next) {
+                arrow.removeClass('out');
+                next();
+                });
+              }
+       */
+      $.each([menu, arrow], function() {
+          this.toggleClass('out');
+          });
+      $.each([heart, add, search, download, trash], function() {
+          this.toggleClass('hide');
+          });
+      $(this).addClass('anim').delay(800).queue(function(next) {
+          $(this).removeClass('anim');
+          next()
+          });
+     });
+  });
+</script>
