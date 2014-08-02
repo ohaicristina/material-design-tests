@@ -1,7 +1,7 @@
 .material-container {
   @extend .container;
-  box-shadow: none !important;
   border: none !important;
+  box-shadow: none !important;
 
   .animation-list {
     background: none !important;
@@ -13,9 +13,8 @@
       margin-bottom: 1em;
       padding: 2em;
       position: relative;
-      overflow: hidden;
       transition: box-shadow 0.25s ease-in;
-      transform: translateZ(0);
+      transform: translateZ(0px);
       backface-visibility: hidden;
       perspective: 1000;
 
@@ -25,19 +24,10 @@
 
       &:hover {
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-        transition: box-shadow 0.5s ease-in;
-
-        .animated-backgrounds {
-          background: #efefef;
-          opacity: 0.1;
-          height: 250%;
-          top: -50%;
-          overflow: hidden;
-          position: absolute;
-          transition: transform 0.7s ease-in, background 0.7s ease-in;
-          z-index: 10;
-
-        }
+        transition: box-shadow 0.25s ease-in;
+        transform: translateZ(0px);
+        backface-visibility: hidden;
+        perspective: 1000;
       }
     }
   }

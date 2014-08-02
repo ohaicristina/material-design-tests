@@ -10,6 +10,7 @@
       <div class="menu">
         <%= image_tag "menu.png" %>
       </div>
+    </div>
    
       <div class="heart">
         <%= image_tag "heart.png" %>
@@ -28,7 +29,6 @@
         <%= image_tag "trash.png", class: "hide" %>
       </div>
     </div>
-    </div>
     </li>
   </ul>
 </div>
@@ -44,7 +44,7 @@ $(document).ready(function() {
     var trash = $(".trash > img");
 
 
-    $("#toggle").on('click', function() {
+    $(".toggle").on('click', function() {
       $.each([menu, arrow], function() {
           this.toggleClass('out');
           });
