@@ -15,6 +15,9 @@
       position: relative;
       overflow: hidden;
       transition: box-shadow 0.25s ease-in;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      perspective: 1000;
 
       &:last-child {
         border-bottom: none;
@@ -34,35 +37,8 @@
           transition: transform 0.7s ease-in, background 0.7s ease-in;
           z-index: 10;
 
-          &.left {
-            @include transform(scaleX(6));
-            @include transform-origin(center left);
-            left: 0;
-            width: 20%;
-
-          }
-
-          &.center {
-            @include transform(scaleX(5));
-            @include transform-origin(center center);
-            left: 38%;
-            width: 25%;
-          }
-
-          &.right {
-            @include transform(scaleX(6));
-            @include transform-origin(center right);
-            right: 0;
-            width: 20%;
-          }
-
         }
       }
     }
   }
-}
-
-@include keyframes(fadeInOut) {
-  0% {color: blue};
-  100% {color: red};
 }

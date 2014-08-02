@@ -45,26 +45,6 @@ $(document).ready(function() {
 
 
     $("#toggle").on('click', function() {
-     // if (menu.hasClass('in')) {
-     //     menu.addClass('out').removeClass('in');
-     //     arrow.addClass('in').removeClass('out').delay(800);
-     //     } else {
-     //     menu.removeClass('out').addClass('in').delay(800)
-     //         .queue(function (next) {
-     //           menu.removeClass('in');
-     //           next();
-     //           });
-     //         }
-      /*if (arrow.hasClass('in')) {
-          arrow.addClass('out');
-          } else {
-          arrow.removeClass('out').addClass('in').delay(800)
-              .queue(function (next) {
-                arrow.removeClass('out');
-                next();
-                });
-              }
-       */
       $.each([menu, arrow], function() {
           this.toggleClass('out');
           });
